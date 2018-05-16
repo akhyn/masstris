@@ -16,7 +16,7 @@ colors = {-1: (255, 255, 255),
           'grey': (128, 128, 128),}
 menu_anchor = (100, 100)
 menu_font_ratio = 10
-menu_items = ['Local Play', 'Network Play (Not enabled)', 'Quit']
+menu_items = ['Local Play', 'Network Play', 'Quit']
 units_per_col = 20
 units_per_line = 15
 title_min_squares_h = 27
