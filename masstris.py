@@ -514,7 +514,7 @@ class GameScreen(Screen):
                 new_display_game = display_game.Board(ghost=False)
                 AI_games[index] = new_AI_game
                 games[index] = new_display_game
-                # Delay first move to avoid bottlenecks
+                # Delay first move to avoid early performance bottlenecks
                 self.ready_games[index] = now + random.randint(100, 300) / 200
             else:pass
 

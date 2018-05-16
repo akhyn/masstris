@@ -10,13 +10,13 @@ max fps = 60
 overscan = 0
 
 [Network]
-network allowed = False
+network allowed = True
 port = 4242
 multicast address = 224.3.29.71
 time to live = 1
 
 [Gameplay]
-max games = 64
+max games = 32
 AI = True
 ghost = True
 
@@ -36,8 +36,8 @@ hard drop = space
 move left = a
 move right = d
 speed up = s
-turn counter-clockwise = n
-turn clockwise = m
+turn counter-clockwise = m
+turn clockwise = n
 pause = return
 quit = escape
 hold = e
@@ -48,8 +48,8 @@ hard drop = down
 move left = left
 move right = right
 speed up = up
-turn counter-clockwise = p
-turn clockwise = o
+turn counter-clockwise = o
+turn clockwise = p
 pause =
 quit =
 hold = backspace

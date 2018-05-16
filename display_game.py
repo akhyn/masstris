@@ -20,10 +20,12 @@ class Board:
             self.board.append([self.WALL for _ in self.NEW_LINE])
 
         # Needed variables
+        self.piece_col = len(self.board[0]) // 2
+        self.piece_row = 0
         self.reports = deque()
         self.pieces = deque()
-        self.piece = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0],[0, 0, 0, 0]]
-        self.hold_piece = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0],[0, 0, 0, 0]]
+        self.piece = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+        self.hold_piece = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
 
         self.ghost = True if ghost else False
         self.score = 0

@@ -1,164 +1,82 @@
 [Video]
-
 # fullscreen mode uses current desktop resolution
-
-fullscreen = False
-
+fullscreen = True
 # windowed resolution
-
 resolution width = 1600
-
 resolution height = 1000
-
 max fps = 60
-
 # overscan is the percentage of your screen not visible due to bezels or other factors
-
 # 0 = display entire screen, 10 = 10% of screen hidden...
-
 overscan = 0
 
-
-
 [Network]
-
-# Very unstable and experimental feature, recommended off
-
-network allowed = False
-
+network allowed = True
 port = 4242
-
 multicast address = 224.3.29.71
-
 time to live = 1
 
-
-
 [Gameplay]
-
-max games = 16
-
+max games = 32
 AI = True
-
 ghost = True
 
-
-
 [Sound]
-
 music = True
-
 max players with sound effects = 2
 
-
-
 [Input Devices]
-
 # player using that configuration
-
 # keyboard configuration to be added in file as well
-
 # format: keybind = player_assigned
-
 keyboard1 = 1
-
 keyboard2 = 2
 
-
-
 [keyboard1]
-
 hard drop = space
-
 move left = a
-
 move right = d
-
 speed up = s
-
-turn counter-clockwise = n
-
-turn clockwise = m
-
+turn counter-clockwise = m
+turn clockwise = n
 pause = return
-
 quit = escape
-
 hold = e
-
 light up = q
 
-
-
 [keyboard2]
-
 hard drop = down
-
 move left = left
-
 move right = right
-
 speed up = up
-
-turn counter-clockwise = p
-
-turn clockwise = o
-
+turn counter-clockwise = o
+turn clockwise = p
 pause =
-
 quit =
-
 hold = backspace
-
 light up = i
 
-
-
 [Menu Input]
-
 move_up = w, up
-
 move_right = d, right
-
 move_left = a, left
-
 move_down = s, down
-
 validate = return, space
-
 quit = escape
-
 AI toggle = i, q, e
 
-
-
 [Menu Controller]
-
 validate = 0
-
 quit = 1
-
 AI toggle = 3
 
-
-
 [Game Controller]
-
 speed up = 5
-
 turn counter-clockwise = 2
-
 turn clockwise = 1
-
 pause = 7
-
 hold = 3
-
 light up = 4
 
 
-
-
 [Acceptable Key Values]
-
 keys = backspace, tab, clear, return, pause, escape, space, exclaim, quotedbl, hash, dollar, ampersand, quote, left parenthesis, right parenthesis, asterisk, plus sign, comma, minus sign, period, forward slash, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, colon, semicolon, less-than sign, equals sign, greater-than sign, question mark, at, left bracket, backslash, right bracket, caret, underscore, grave, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, delete, keypad 0, keypad 1, keypad 2, keypad 3, keypad 4, keypad 5, keypad 6, keypad 7, keypad 8, keypad 9, keypad period, keypad divide, keypad multiply, keypad minus, keypad plus, keypad enter, keypad equals, up arrow, down arrow, right arrow, left arrow, insert, home, end, page up, page down, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12, F13, F14, F15, numlock, capslock, scrollock, right shift, left shift, right control, left control, right alt, left alt, right meta, left meta, left Windows key, right Windows key, mode shift, help, print screen, sysrq, break, menu, power, Euro

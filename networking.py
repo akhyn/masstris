@@ -108,7 +108,7 @@ class Network:
 
         # Exit if main program requests, otherwise keep listening
         while self.task == my_task:
-            if time.process_time() - last_msg > self.broadcast_delay and self.my_data != None:
+            if time.process_time() - last_msg > self.broadcast_delay and self.my_data is not None:
                 self.update_status()
                 last_msg = time.process_time()
             try:
@@ -118,10 +118,8 @@ class Network:
                 msg_task, data = pickle.loads(payload)
                 # Store and time stamp the data if message is relevant
                 if IP != self.my_IP and msg_task == 'announce':
-                    self.host_data.get(IP, {})
+                    self.host_data[IP] = {key: data[key] for key in data}
                     self.host_data[IP]['update_time'] = time.process_time()
-                    for item in data:
-                        self.host_data[IP][item] = data[item]
             except:
                 pass
 
