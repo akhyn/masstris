@@ -1,10 +1,10 @@
 # MassTris
-    MassTris is a lightweight and scaling implementation of Tetris from scratch. It is designed to allow a LOT of people to mass together in a single multiplayer tetris game with as little
-overhead and as few requirements and dependencies as possible.
+    MassTris is a lightweight and scaling implementation of Tetris from scratch. It is designed to allow a LOT of people
+to mass together in a single multiplayer tetris game.
 
 ![Main menu](/docs/masstris.jpg)
 
-![Gameplay Image](https://github.com/akhyn/masstris/blob/master/docs/masstris2.jpg)
+![Gameplay Image](/docs/masstris2.jpg)
 
 
 Requirements
@@ -103,4 +103,5 @@ Battle (Boss) by BoxCat Games
 Breaking In by BoxCat Games
 (converted to .ogg)
 
-### Background images from NASA/ESA
+### Background images
+Credits to NASA/ESA
