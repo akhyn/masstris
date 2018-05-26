@@ -1,6 +1,6 @@
 # MassTris
-    MassTris is a lightweight and scaling implementation of Tetris from scratch. It is designed to allow a LOT of people
-to mass together in a single multiplayer tetris game.
+    MassTris is a lightweight and scaling implementation of Tetris from scratch. It is designed to allow
+a LOT of people to mass together in a single multiplayer tetris game.
 
 ![Main menu](/docs/masstris.jpg)
 
@@ -15,7 +15,7 @@ Pygame ("python -m pip install -U pygame --user" or see pygame.org)
 
 Quick Setup
 ===========
-Open "configuration.txt"
+Open "configuration.txt
 Set Fullscreen mode True/False
 Set Resolution for windowed mode
 Assign keyboard1 and keyboard2 to players that will use the keyboard.
@@ -28,13 +28,13 @@ Note: Networking is very experimental and unstable recommended left off
 How to play
 ===========
 ### Menu:
-  keyboard:
+  ##### keyboard:
     left/right/a/d to adjust number of local players
     up/down/w/s to select options
     i/q/e to turn CPU players on or off
     return/space to confirm selection
     escape to quit
-  joystick/gamepad:
+  ##### joystick/gamepad:
     left/right to adjust number of local players
     up/down to select options
     Y/Button 3 to turn CPU players on or off
@@ -42,7 +42,7 @@ How to play
     B/Button 1 to quit
 
 ### Gameplay (All can be changed in "configuration.txt"):
-  Default Keyboard 1:
+  ##### Default Keyboard 1:
     a/d to move piece
     e to store/swap current tetramino
     space to fast drop the current tetramino
@@ -50,7 +50,7 @@ How to play
     q to highlight game
     s to speed up dropping speed
     return to pause
-  Default Keyboard 2:
+  ##### Default Keyboard 2:
     left/right to move piece
     up/down to select options
     backspace to store/swap current tetramino
@@ -58,7 +58,7 @@ How to play
     o/p to rotate
     i to highlight game
     up to speed up dropping speed
-  Joystick/Gamepad:
+  ##### Joystick/Gamepad:
     left/right to move piece
     Y/Button 3 to store/swap current tetramino
     A/Button 0 to fast drop the current tetramino
@@ -71,10 +71,10 @@ How to play
 Configuration
  ============
 Settings can be changed in "configuration.txt", reset to default by deleting the file.
-Important Settings:
+##### Important Settings:
 FullScreen on/off
 Resolution for windowed mode
-Max Games has no hard limit... the difference between the number of players and the cap will be made up by AI if turned on
+Max Games has no hard limit... the difference between the number of players and the cap will be made up by AI if turned on.
 Performance of the system and size of the display required are left up to the user.
 As many keyboard configurations as wanted can be added by following patterns for keyboard 1 and 2.
 All gamepads and joysticks detected will be assigned to the other players
