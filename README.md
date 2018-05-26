@@ -1,5 +1,5 @@
 # MassTris
-MassTris is a lightweight and scaling implementation of Tetris from scratch. It is designed to allow a LOT of people to mass together in a single multiplayer tetris game.
+_**MassTris**_ is a lightweight and scaling implementation of Tetris from scratch. It is designed to allow a **LOT** of people to mass together in a single multiplayer tetris game.
 
 ![Main menu](/docs/masstris.jpg)
 
