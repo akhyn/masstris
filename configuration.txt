@@ -1,6 +1,6 @@
 [Video]
 # fullscreen mode uses current desktop resolution
-fullscreen = True
+fullscreen = False
 # windowed resolution
 resolution width = 1600
 resolution height = 1000
@@ -16,7 +16,7 @@ multicast address = 224.3.29.71
 time to live = 1
 
 [Gameplay]
-max games = 32
+max games = 10
 AI = True
 ghost = True
 

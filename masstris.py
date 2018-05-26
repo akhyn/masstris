@@ -16,7 +16,9 @@ import ai
 
 
 class Screen:
-    """"""
+    """
+    Base class for game screens
+    """
     def __init__(self):
         global display
         self.next = self
@@ -208,7 +210,8 @@ class LoadScreen(Screen):
                         self.next = MainScreen()
                     else:
                         network.my_data['status'] = 'start'
-                except:pass
+                except:
+                    pass
 
     def process_events(self):
         """
@@ -224,10 +227,10 @@ class LoadScreen(Screen):
             best_pick = None
             for IP in host_data:
                 # set best_pick to first element if None
-                if best_pick == None:
+                if best_pick is None:
                     best_pick = IP
                 # for all the hosts that can run AI
-                if host_data[IP]['AI'] == True:
+                if host_data[IP]['AI'] is True:
                     # pick highest max
                     if host_data[IP]['max'] > host_data[best_pick]['max']:
                         best_pick = IP
@@ -249,26 +252,25 @@ class LoadScreen(Screen):
                 hosts = encoded_data.split('&')
                 for host in hosts:
                     items = host.split('%')
-                    decoded_data[items[0]] = {'start_range': int(items[1]),
-                                        'end_range': int(items[2])}
-            except:
+                    decoded_data[items[0]] = {'start_range': int(items[1]), 'end_range': int(items[2])}
+            except (KeyError, IndexError):
                 pass
             return decoded_data
 
         if self.game_ready():
-            #check whether I'm the master
+            # check whether this host is the master
             master_IP = find_main_host()
             is_master = bool(master_IP == network.my_IP)
 
             if is_master:
-                #set up game data
+                # set up game data
                 network.game_data = self.dispatcher(True)
-                #sync up other games
+                # sync up other games
                 network.task = 'sync_master'
                 # Delay to give clients a headstart
                 time.sleep(1)
             else:
-                #sync with master
+                # sync with master
                 network.task = 'sync'
 
             time_out = time.process_time()
@@ -342,7 +344,8 @@ class LoadScreen(Screen):
                         for _ in range(network.host_data[IP]['players']):
                             game_ID += 1
                         game_data[IP]['end_range'] = game_ID - 1
-                    else:break
+                    else:
+                        break
 
         game_data['AI'] = {}
         game_data['AI']['start_range'] = game_ID
