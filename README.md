@@ -2,16 +2,19 @@ MassTris is a lightweight and scaling implementation of Tetris from scratch, for
 MassTris is designed to allow a LOT of people to mass together in a single multiplayer tetris game with as little
 overhead and as few requirements and dependencies as possible.
 
+![Image] https://github.com/akhyn/masstris/blob/master/docs/masstris.jpg
+
+![Image] https://github.com/akhyn/masstris/blob/master/docs/masstris2.jpg
 
 
-
-==> Requirements <==
+Requirements
+============
 Python >= 3.6 (see python.org for details for your system)
 Pygame ("python -m pip install -U pygame --user" or see pygame.org)
 
 
-
-==> Quick Setup <==
+Quick Setup
+===========
 Open "configuration.txt"
 Set Fullscreen mode True/False
 Set Resolution for windowed mode
@@ -22,10 +25,9 @@ Examples:
 Note: Networking is very experimental and unstable recommended left off
 
 
-
-
-==> How to play <==
-Menu:
+How to play
+===========
+### Menu:
   keyboard:
     left/right/a/d to adjust number of local players
     up/down/w/s to select options
@@ -39,7 +41,7 @@ Menu:
     A/Button 0 to confirm selection
     B/Button 1 to quit
 
-Gameplay (All can be changed in "configuration.txt"):
+### Gameplay (All can be changed in "configuration.txt"):
   Default Keyboard 1:
     a/d to move piece
     e to store/swap current tetramino
@@ -66,8 +68,8 @@ Gameplay (All can be changed in "configuration.txt"):
     START to pause
 
 
-
-==> Configuration <==
+Configuration
+ ============
 Settings can be changed in "configuration.txt", reset to default by deleting the file.
 Important Settings:
 FullScreen on/off
@@ -78,23 +80,27 @@ As many keyboard configurations as wanted can be added by following patterns for
 All gamepads and joysticks detected will be assigned to the other players
 
 
-
-==> Customizing Assets <==
-Music:
+Customizing Assets
+==================
+### Music:
 Drop in any *.ogg music files in the data/music folder and it will be randomly selected to play during gameplay.
 The menu.ogg file is the track played on menu screen.
 
-Backgrounds:
+### Backgrounds:
 Drop in wallpapers in the data/backgrounds folder to be randomly displayed during games.
 *.jpg format recommended
 
-==> License Information <==
-Menu track:
+
+License Information
+===================
+### Menu track:
 The Pirate and the Dancer by Rolemusic on Enough Records
 (converted to .ogg)
 
-Other included tracks for demonstration:
+### Other included tracks for demonstration:
 Epic Song by BoxCat Games
 Battle (Boss) by BoxCat Games
 Breaking In by BoxCat Games
 (converted to .ogg)
+
+### Background images from NASA/ESA
