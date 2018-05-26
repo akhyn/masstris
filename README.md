@@ -2,9 +2,9 @@ MassTris is a lightweight and scaling implementation of Tetris from scratch, for
 MassTris is designed to allow a LOT of people to mass together in a single multiplayer tetris game with as little
 overhead and as few requirements and dependencies as possible.
 
-![Image] https://github.com/akhyn/masstris/blob/master/docs/masstris.jpg
+![Image] (https://github.com/akhyn/masstris/blob/master/docs/masstris.jpg)
 
-![Image] https://github.com/akhyn/masstris/blob/master/docs/masstris2.jpg
+![Image] (https://github.com/akhyn/masstris/blob/master/docs/masstris2.jpg)
 
 
 Requirements
