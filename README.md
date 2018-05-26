@@ -1,6 +1,5 @@
 # MassTris
-    MassTris is a lightweight and scaling implementation of Tetris from scratch. It is designed to allow
-a LOT of people to mass together in a single multiplayer tetris game.
+MassTris is a lightweight and scaling implementation of Tetris from scratch. It is designed to allow a LOT of people to mass together in a single multiplayer tetris game.
 
 ![Main menu](/docs/masstris.jpg)
 
@@ -9,20 +8,20 @@ a LOT of people to mass together in a single multiplayer tetris game.
 
 Requirements
 ============
-Python >= 3.6 (see python.org for details for your system)
+Python >= 3.6 (see python.org for details for your system)  
 Pygame ("python -m pip install -U pygame --user" or see pygame.org)
 
 
 Quick Setup
 ===========
-Open "configuration.txt
-Set Fullscreen mode True/False
-Set Resolution for windowed mode
-Assign keyboard1 and keyboard2 to players that will use the keyboard.
-Examples:
- Solo game with gamepad: Set keyboard1 to 2 and keyboard2 to 3
- Game with first player on keyboard, second and third players on gamepads: Set keyboard1 to 1, keyboard2 to 4
-Note: Networking is very experimental and unstable recommended left off
+Open "configuration.txt  
+Set Fullscreen mode True/False  
+Set Resolution for windowed mode  
+Assign keyboard1 and keyboard2 to players that will use the keyboard.  
+##### Examples:  
+ Solo game with gamepad: Set keyboard1 to 2 and keyboard2 to 3  
+ Game with first player on keyboard, second and third players on gamepads: Set keyboard1 to 1, keyboard2 to 4  
+Note: Networking is very experimental and unstable recommended left off  
 
 
 How to play
@@ -72,35 +71,35 @@ Configuration
  ============
 Settings can be changed in "configuration.txt", reset to default by deleting the file.
 ##### Important Settings:
-FullScreen on/off
-Resolution for windowed mode
-Max Games has no hard limit... the difference between the number of players and the cap will be made up by AI if turned on.
-Performance of the system and size of the display required are left up to the user.
-As many keyboard configurations as wanted can be added by following patterns for keyboard 1 and 2.
-All gamepads and joysticks detected will be assigned to the other players
+FullScreen on/off  
+Resolution for windowed mode  
+Max Games has no hard limit... the difference between the number of players and the cap will be made up by AI if turned on.  
+Performance of the system and size of the display required are left up to the user.  
+As many keyboard configurations as wanted can be added by following patterns for keyboard 1 and 2.  
+All gamepads and joysticks detected will be assigned to the other players.
 
 
 Customizing Assets
 ==================
 ### Music:
-Drop in any *.ogg music files in the data/music folder and it will be randomly selected to play during gameplay.
+Drop in any *.ogg music files in the data/music folder and it will be randomly selected to play during gameplay.  
 The menu.ogg file is the track played on menu screen.
 
 ### Backgrounds:
-Drop in wallpapers in the data/backgrounds folder to be randomly displayed during games.
+Drop in wallpapers in the data/backgrounds folder to be randomly displayed during games.  
 *.jpg format recommended
 
 
 License Information
 ===================
 ### Menu track:
-The Pirate and the Dancer by Rolemusic on Enough Records
+The Pirate and the Dancer by Rolemusic on Enough Records  
 (converted to .ogg)
 
 ### Other included tracks for demonstration:
-Epic Song by BoxCat Games
-Battle (Boss) by BoxCat Games
-Breaking In by BoxCat Games
+Epic Song by BoxCat Games  
+Battle (Boss) by BoxCat Games  
+Breaking In by BoxCat Games  
 (converted to .ogg)
 
 ### Background images
