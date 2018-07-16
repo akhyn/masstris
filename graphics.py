@@ -73,7 +73,7 @@ class Graphics:
         self.clock.tick(self.max_fps)
 
     def load_screen(self, remote_clients=None):
-        if remote_clients == None:
+        if remote_clients is None:
             remote_clients = {}
 
         self.screen.fill((0, 0, 0))
