@@ -307,7 +307,6 @@ class Graphics:
                         else:
                             original = self.colors[piece[row][col]]
                             color = (original[0]//2, original[1]//2, original[2]//2)
-                        # Draw square
                         draw_square(piece_row + row, piece_col + col, color)
 
         def draw_frame():
