@@ -874,7 +874,7 @@ class GameScreen(Screen):
             while self.is_connected and len(network.game_updates) > 0:
                 # handle oldest message
                 game_ID, report = network.game_updates.popleft()
-                #check whether display has been moved to relocate local games
+                # check whether display has been moved to relocate local games
                 if game_ID < self.my_offset:
                     game_ID = game_ID + self.remote_offset
 
@@ -944,7 +944,6 @@ class GameScreen(Screen):
 
 def play_next_song(menu=False):
     global song_list
-    global menu_music
     if menu:
         pygame.mixer.music.load(menu_music)
     else:
@@ -1100,7 +1099,6 @@ def set_up():
     finally:
         os.chdir(base_dir)
 
-
     # Network configuration and threads
     global network
     network = networking.Network(*network_conf)
@@ -1174,7 +1172,8 @@ def quit_game():
 
     Ends pygame and AI processes
     """
-    pygame.quit()
+    global exit_triggered
+    exit_triggered = True
 
     # Send kill signal to all AI workers
     try:
@@ -1182,8 +1181,6 @@ def quit_game():
             AI_todo_queue.put(- 1)
     except:
         pass
-
-    sys.exit()
 
 
 def main():
@@ -1198,20 +1195,26 @@ def main():
     set_up()
     active_screen = TitleScreen()
     pause_triggered = False
+    global exit_triggered
+    exit_triggered = False
 
     # main loop
     while True:
         pause_triggered = active_screen.process_input()
-        if not pause_triggered:
-            event_status = active_screen.process_events()
+        if not pause_triggered and not exit_triggered:
+            active_screen.process_events()
             active_screen.process_AI()
+            active_screen = active_screen.next
+            active_screen.update_display()
         else:
-            time.sleep(0.001)
-        active_screen = active_screen.next
-        active_screen.update_display()
+            if exit_triggered:
+                pygame.quit()
+                sys.exit()
+            time.sleep(0.1)
+
 
 if __name__ == '__main__':
-    """Tetris yo"""
+    """GLHF"""
     main()
 
 
