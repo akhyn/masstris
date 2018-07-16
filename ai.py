@@ -82,7 +82,7 @@ def AI_worker(ready_queue, todo_queue):
             """
             for row in range(len(shape)):
                 for col in range(len(shape)):
-                    # Empty slots contain 0, any other number means collision
+                    # Empty slots are contain 0, any number means collision
                     if board[test_row + row][test_col + col] and shape[row][col]:
                         return False
             return True
