@@ -91,12 +91,12 @@ class MainScreen(Screen):
         global run_AI
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                quit()
+                quit_game()
             elif event.type == pygame.KEYDOWN:
                 try:
                     action = menu_keys[pygame.key.name(event.key)]
                     if action == 'quit':
-                        quit()
+                        quit_game()
                     elif action == 'move_right':
                         self.move_right()
                     elif action == 'move_left':
@@ -156,7 +156,7 @@ class MainScreen(Screen):
 
     def validate(self):
         if self.selection == 2:
-            quit()
+            quit_game()
         elif self.selection == 1:
             is_connected = True
         else:
@@ -201,7 +201,7 @@ class LoadScreen(Screen):
         """
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                quit()
+                quit_game()
             if event.type == pygame.KEYDOWN:
                 try:
                     action = menu_keys[pygame.key.name(event.key)]
@@ -554,7 +554,7 @@ class GameScreen(Screen):
         for event in pygame.event.get():
             global players_with_sound
             if event.type == pygame.QUIT:
-                quit()
+                quit_game()
             elif event.type == SONG_END:
                 play_next_song()
             # Keyboard button pressed
@@ -980,7 +980,7 @@ def load_config(default=False):
                 with open('default_configuration', encoding='utf-8'):
                     return 'default_configuration'
             except FileNotFoundError:
-                quit()
+                quit_game()
 
     if default:
         config_file = reset_config()
@@ -1168,7 +1168,7 @@ def set_up():
         os.chdir(base_dir)
 
 
-def quit():
+def quit_game():
     """
     Clean up function to cleanly exit game
 
@@ -1186,12 +1186,12 @@ def quit():
     sys.exit()
 
 
-if __name__ == '__main__':
-    """Tetris yo"""
+def main():
     pygame.mixer.pre_init(44100, -16, 1, 512)
     pygame.mixer.init()
     pygame.init()
     # register custom event
+    global SONG_END
     SONG_END = pygame.USEREVENT + 1
     pygame.mixer.music.set_endevent(SONG_END)
     pygame.event.set_allowed([pygame.QUIT, pygame.KEYDOWN, pygame.KEYUP, pygame.JOYBUTTONUP, pygame.JOYBUTTONDOWN, pygame.JOYHATMOTION, SONG_END])
@@ -1209,4 +1209,9 @@ if __name__ == '__main__':
             time.sleep(0.001)
         active_screen = active_screen.next
         active_screen.update_display()
+
+if __name__ == '__main__':
+    """Tetris yo"""
+    main()
+
 
